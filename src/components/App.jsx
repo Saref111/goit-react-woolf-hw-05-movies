@@ -9,6 +9,7 @@ export const App = () => {
     <div
       style={{
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
@@ -19,7 +20,11 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<Header />}>
             <Route index element={<Home />} />
-            <Route path="/movies/:movieId" element={<MoviesDetails />} />
+            <Route path="/movies" element={<MoviesDetails />} />
+            <Route path="/movies/:movieId" element={<MoviesDetails />}>
+              <Route path="cast" element={<div>Cast</div>} />
+              <Route path="reviews" element={<div>Reviews</div>} />
+            </Route>
           </Route>
         </Routes>
       </Suspense>
