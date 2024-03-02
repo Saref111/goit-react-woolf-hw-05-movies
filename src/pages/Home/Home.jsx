@@ -8,8 +8,7 @@ export const Home = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       const response = await fetchTrendingMovies();
-      setMovies(response.data);
-      console.log(111);
+      setMovies(response.data.results);
     };
 
     try {
@@ -21,10 +20,9 @@ export const Home = () => {
     return (
         <div>
             <ul>
-                {movies.map((movie) => (
+                {movies?.map((movie) => (
                     <li key={movie.id}>
-                        {/* <Link to={``}/> */}
-                        {movie.title}
+                        <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
                     </li>
                 ))}
             </ul>
