@@ -1,23 +1,8 @@
-import { useEffect, useState } from "react";
-import { fetchTrendingMovies } from "../services/api";
+
+import { Home } from "pages/Home/Home";
+import { Routes, Route } from "react-router-dom";
 
 export const App = () => {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    const fetchMovies = async () => {
-      const response = await fetchTrendingMovies();
-      setMovies(response.data);
-      console.log(111);
-    };
-
-    try {
-      fetchMovies();
-    } catch (error) {
-      console.log(error);
-    }
-  }, []);
-
   return (
     <div
       style={{
@@ -29,7 +14,10 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        {/* <Route/> */}
+      </Routes>
     </div>
   );
 };
