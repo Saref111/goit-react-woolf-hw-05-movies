@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { fetchTrendingMovies } from "../../services/api";
-import { Link } from "react-router-dom";
 import { MoviesList } from "pages/MoviesList/MoviesList";
 
 export const Home = () => {
