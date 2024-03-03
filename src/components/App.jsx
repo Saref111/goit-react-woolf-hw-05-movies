@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import { Home } from 'pages/Home/Home';
 import { MoviesDetails } from 'pages/MoviesDetails/MoviesDetails';
+import { Cast } from 'pages/Cast/Cast';
 import { Routes, Route } from 'react-router-dom';
 import { Header } from './Header/Header';
 
@@ -22,7 +23,7 @@ export const App = () => {
             <Route index element={<Home />} />
             <Route path="/movies" element={<MoviesDetails />} />
             <Route path="/movies/:movieId" element={<MoviesDetails />}>
-              <Route path="cast" element={<div>Cast</div>} />
+              <Route path="cast" element={<Cast/>} />
               <Route path="reviews" element={<div>Reviews</div>} />
             </Route>
           </Route>

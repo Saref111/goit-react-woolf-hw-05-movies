@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { fetchMovieDetails } from 'services/api';
 import css from './MoviesDetails.module.scss';
@@ -37,6 +37,14 @@ export const MoviesDetails = () => {
           </div>
         </section>
       )}
+      <ul className={css.subNav}>
+        <li>
+          <NavLink className={css.subNavLink} to={`/movies/${movieId}/cast`}>Cast</NavLink>
+        </li>
+        <li>
+            <NavLink className={css.subNavLink} to={`/movies/${movieId}/reviews`}>Reviews</NavLink>
+        </li>
+      </ul>
       <Outlet />
     </div>
   );
