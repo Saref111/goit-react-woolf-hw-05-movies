@@ -15,6 +15,8 @@ export const MoviesList = ({ movies }) => {
               <img
                 src={movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : DEFAULT_IMG}
                 alt={movie.title}
+                width={400}
+                height={700}
               />
               {movie.title}
             </Link>
