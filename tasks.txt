@@ -50,29 +50,3 @@ alt="poster"
 />
 Створення списку фільмів на сторінках Home, Movies виносимо в окремий компонент MoviesList.
 Домашня робота об'ємна, багатогранна і цікава. Обов'язково дивимося демо-відео і реалізуємо покроково. Якщо стилізуєте красивенько - мій особистий like :facepunch:
-
-
-
-
-
-
-
-
-
-
-
-Message mentor-react
-
-
-
-
-
-
-
-
-
-Shift + Enter to add a new line
-
-
-
-Slack needs your permission to enable desktop notifications.

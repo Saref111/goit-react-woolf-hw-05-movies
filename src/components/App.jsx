@@ -5,6 +5,7 @@ import { Cast } from 'pages/Cast/Cast';
 import { Routes, Route } from 'react-router-dom';
 import { Header } from './Header/Header';
 import { Search } from 'pages/Search/Search';
+import { Reviews } from 'pages/Reviews/Reviews';
 
 export const App = () => {
   return (
@@ -25,7 +26,7 @@ export const App = () => {
             <Route path="/movies" element={<Search />} />
             <Route path="/movies/:movieId" element={<MoviesDetails />}>
               <Route path="cast" element={<Cast/>} />
-              <Route path="reviews" element={<div>Reviews</div>} />
+              <Route path="reviews" element={<Reviews/>} />
             </Route>
           </Route>
         </Routes>
