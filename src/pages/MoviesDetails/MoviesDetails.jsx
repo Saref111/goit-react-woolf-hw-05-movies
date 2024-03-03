@@ -3,11 +3,12 @@ import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { fetchMovieDetails } from 'services/api';
 import css from './MoviesDetails.module.scss';
+import { DEFAULT_IMG } from '../../constants';
 
 export const MoviesDetails = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
-  const previousPage = useLocation()?.state?.from;
+  const location = useLocation();
 
   useEffect(() => {
     if (!movieId) return;
@@ -25,13 +26,12 @@ export const MoviesDetails = () => {
 
   return (
     <div>
-      <NavLink to={previousPage || '/'}>Back to movies</NavLink>
+      <NavLink to={location.state?.from || '/'}>Back to movies</NavLink>
       {movie && (
         <section className={css.section}>
           <img
             src={
-              'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' +
-              movie.backdrop_path
+              movie.backdrop_path ? 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + movie.backdrop_path : DEFAULT_IMG
             }
             alt={movie.title}
             width={600}

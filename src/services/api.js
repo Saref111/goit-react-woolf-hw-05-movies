@@ -23,3 +23,7 @@ export const fetchMovieCast = async (movieId) => {
 export const fetchMovieReviews = async (movieId) => {
   return await axios.get(`/movie/${movieId}/reviews`);
 };
+
+export const fetchSearchMovies = async (query) => {
+  return await axios.get(`/search/movie?query=${query}`);
+};
