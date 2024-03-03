@@ -4,6 +4,7 @@ import { MoviesDetails } from 'pages/MoviesDetails/MoviesDetails';
 import { Cast } from 'pages/Cast/Cast';
 import { Routes, Route } from 'react-router-dom';
 import { Header } from './Header/Header';
+import { Search } from 'pages/Search/Search';
 
 export const App = () => {
   return (
@@ -21,7 +22,7 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<Header />}>
             <Route index element={<Home />} />
-            <Route path="/movies" element={<MoviesDetails />} />
+            <Route path="/movies" element={<Search />} />
             <Route path="/movies/:movieId" element={<MoviesDetails />}>
               <Route path="cast" element={<Cast/>} />
               <Route path="reviews" element={<div>Reviews</div>} />

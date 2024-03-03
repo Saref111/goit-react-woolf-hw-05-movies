@@ -5,7 +5,7 @@ import css from './Header.module.scss';
 export const Header = () => {
   return (
     <>
-      <header>
+      <header className={css.header}>
         <nav>
           <ul className={css.nav}>
             <li>
