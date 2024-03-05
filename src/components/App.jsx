@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { Home } from 'pages/Home/Home';
 import { MoviesDetails } from 'pages/MoviesDetails/MoviesDetails';
 import { Cast } from 'pages/Cast/Cast';
@@ -19,7 +19,6 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Header />}>
             <Route index element={<Home />} />
@@ -30,7 +29,6 @@ export const App = () => {
             </Route>
           </Route>
         </Routes>
-      </Suspense>
     </div>
   );
 };

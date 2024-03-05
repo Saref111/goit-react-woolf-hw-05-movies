@@ -31,7 +31,9 @@ export const Reviews = () => {
             </li>
           ))}
         </ul>
-      ) : null}
+      ) : (
+        <p>We don't have any reviews for this movie</p>
+      )}
     </div>
   );
 };
